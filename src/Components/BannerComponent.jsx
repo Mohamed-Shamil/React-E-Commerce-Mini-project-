@@ -1,12 +1,20 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const BannerComponent = () => {
+  AOS.init();
+
   const backgroundImageUrl =
     "https://schrankdesign.de/cdn/shop/files/Banner_3.jpg?v=1674234169&width=1000";
 
-    const backgroundImageUrltwo  = "https://schrankdesign.de/cdn/shop/files/Composing_171b5300-98f1-4e88-8de2-9975f4279ef2_720x.jpg?v=1674181504"
+  const backgroundImageUrltwo =
+    "https://schrankdesign.de/cdn/shop/files/Composing_171b5300-98f1-4e88-8de2-9975f4279ef2_720x.jpg?v=1674181504";
 
   return (
     <div
       className="h-[34rem] bg-cover bg-center relative"
+      data-aos="fade-up"
+      data-aos-duration="3000"
       style={{
         backgroundImage: `url('${backgroundImageUrl}')`,
         backgroundRepeat: "no-repeat",
@@ -235,7 +243,11 @@ const BannerComponent = () => {
           </p>
           <p className="text-gray-600">Laura</p>
           <p className="text-gray-600">01/20/2022</p>
-          <div className="flex flex-col items-center justify-center">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            className="flex flex-col items-center justify-center"
+          >
             <img
               className="h-10 w-10"
               src="https://cdn.shopify.com/s/files/1/0689/3977/6300/files/Principale_9dd5deef-0919-45ef-93e7-b743c70466b0_56x56.jpg"
@@ -405,43 +417,173 @@ const BannerComponent = () => {
         </div>
 
         <div className="flex flex-col mt-20 mb-20 overflow-hidden justify-center">
-        <h1 className="text-4xl font-bold text-center flex flex-col items-center">
-  <span className="whitespace-pre-line">
-    {"Schönheit ist die Mischung aus Form und Funktion,die \n das Auge erfreut und das Herz inspiriert."}
-  </span>
-</h1>
+          <h1 className="text-4xl font-bold text-center flex flex-col items-center">
+            <span className="whitespace-pre-line">
+              {
+                "Schönheit ist die Mischung aus Form und Funktion,die \n das Auge erfreut und das Herz inspiriert."
+              }
+            </span>
+          </h1>
 
-<p className="font-thin text-base mt-4">Louis Sullivan</p>
-
+          <p className="font-thin text-base mt-4">Louis Sullivan</p>
         </div>
 
-        <div className="h-screen w-full bg-cover bg-center relative" 
-         style={{
+        <div
+          className="h-screen w-full bg-cover bg-center relative"
+          style={{
             backgroundImage: `url('${backgroundImageUrltwo}')`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
-          }}>
-<div className="absolute inset-0 bg-black opacity-20"></div>
+          }}
+        >
+          <div className="absolute inset-0 bg-black opacity-20"></div>
 
+          <div className="flex flex-col justify-center h-full items-center w-1/2 relative z-10">
+            <h3 className="text-lg text-white font-bold">
+              {
+                "MODERNE FORMEN UND LIEBE, BEIDES ERFORDERT MUT UND RISIKOBEREITSCHAFT."
+              }
+            </h3>
+            <h1 className="text-6xl ml-8 mt-5 text-white font-bold">
+              Moderne Formen und Liebe
+            </h1>
 
-<div className="flex flex-col justify-center h-full items-center w-1/2 relative z-10">
-  <h3 className="text-lg text-white font-bold">
-  {"MODERNE FORMEN UND LIEBE, BEIDES ERFORDERT MUT UND RISIKOBEREITSCHAFT."}    
-  </h3>
-  <h1 className="text-6xl ml-8 mt-5 text-white font-bold">Moderne Formen und
-Liebe</h1>
- 
-  <button className="bg-green-600 h-12 bg-opacity-90 rounded-md w-72 text-white mt-5 font-bold">
-    DESIGNE DEINE ZUKUNFT
-  </button>
-</div>
+            <button className="bg-green-600 h-12 bg-opacity-90 rounded-md w-72 text-white mt-5 font-bold">
+              DESIGNE DEINE ZUKUNFT
+            </button>
+          </div>
         </div>
       </div>
 
-      <footer className="bg-gray-400 sh-96">
+      <div className="flex  justify-center mt-8 items-center">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="flex rounded-3xl  p-6 justify-center items-center"
+        >
+          <div className="relative overflow-hidden">
+            <img
+              className="rounded-xl h-[670px] w-full transition-transform transform-gpu scale-100 hover:scale-105"
+              src="https://schrankdesign.de/cdn/shop/files/Composing_720x.jpg?v=1674181436"
+              alt=""
+            />
+            <div className="absolute inset-0 bg-black opacity-30 rounded-xl"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-white font-bold text-5xl">Kommoden</p>
+            </div>
+          </div>
+        </div>
 
-      </footer>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="flex flex-col justify-center relative gap-8 items-center"
+        >
+          <div className="relative group overflow-hidden">
+            <img
+              className="h-80 w-full rounded-3xl transition-transform transform-gpu scale-100 group-hover:scale-105"
+              src="https://schrankdesign.de/cdn/shop/files/Composing_klein_i2_700x.jpg?v=1674147980"
+              alt=""
+            />
+            <div className="absolute inset-0 bg-black opacity-30 rounded-3xl"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-white font-bold text-3xl">Sideboards</p>
+            </div>
+          </div>
+          <div className="relative group overflow-hidden">
+            <img
+              className="h-80 w-full rounded-3xl transition-transform transform-gpu scale-100 group-hover:scale-105"
+              src="https://schrankdesign.de/cdn/shop/files/Composing_klein_1320x.jpg?v=1674215640"
+              alt=""
+            />
+            <div className="absolute inset-0 bg-black opacity-30 rounded-3xl"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-white font-bold text-3xl">Lowboards</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-center mt-5">
+        <h1 className="text-center text-5xl font-bold">Werte und Erfahrung</h1>
+        <div className="flex justify-around items-center mt-8">
+          <div className="flex flex-col items-center justify-center">
+            <img
+              src="https://schrankdesign.de/cdn/shop/files/Individuell_1200x.jpg?v=1674221575"
+              className="w-84 rounded-2xl h-80"
+              alt=""
+            />
+            <h3 className="text-2xl font-bold mt-4">Individuell</h3>
+            <p className="break-words text-center">
+              Mit unserem individuellen Möbel-Konfigurator kannst du ganz
+              einfach dein persönliches Designerstück kreieren. Entwerfe es nach
+              deinen Wünschen und erwecke es zum Leben!
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center justify-center">
+            <img
+              src="https://schrankdesign.de/cdn/shop/files/Nachhaltig_1200x.jpg?v=1674221185"
+              className="w-84 rounded-2xl h-80"
+              alt=""
+            />
+            <h3 className="text-2xl font-bold mt-4">Nachaltig</h3>
+            <p className="break-words text-center">
+              Verantwortungsvoller Umgang mit Holz als Rohstoff und Regionalität
+              aus Leipzig sichern unsere Nachhaltigkeit. Unsere Möbel schonen
+              die Umwelt und unterstützen die Region
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center justify-center">
+            <img
+              src="https://schrankdesign.de/cdn/shop/files/Muster_1200x.jpg?v=1674221120"
+              className="w-84 rounded-2xl h-80"
+              alt=""
+            />
+            <h3 className="text-2xl font-bold mt-4">Beratung</h3>
+            <p className="break-words text-center">
+              Unsere Tischler bieten dir persönliche und kompetente Beratung bei
+              der Wahl deiner Möbel. Lass dich von unseren Fachleuten beraten
+              und finde genau das, was du suchst!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer className="h-96 bg-neutral-500 mt-9 justify-around flex">
+  <div className="flex flex-col mt-4 gap-5">
+    <h4 className="text-white font-semibold text-lg">UNSER SERVICE</h4>
+    <p className="text-white">Über Uns</p>
+    <p className="text-white">Beratung</p>
+    <p className="text-white">Muster</p>
+    <p className="text-white">FAQ - Häufige Fragen</p>
+    <p className="text-white">Maßanfertigung & Sonderwunsch</p>
+    <p className="text-white">Bestellung & Konfiguration</p>
+    <h2 className="text-white font-semibold mt-5">Schrankdesign.de</h2>
+  </div>
+
+  <div className="flex mt-4 flex-col gap-5">
+    <h4 className="text-white font-semibold text-lg">RECHTLICHES</h4>
+    <p className="text-white">AGB</p>
+    <p className="text-white">Widerrufsrecht</p>
+    <p className="text-white">Impressum</p>
+    <p className="text-white">Versand</p>
+    <p className="text-white">Datenschutz</p>
+    <p className="text-white">Cookie Einstellungen</p>
+  </div>
+
+  <div className="flex mt-4 flex-col gap-5 max-w-[350px]">
+    <h4 className="text-white font-semibold text-lg">DESIGNERMÖBEL NACH MAS</h4>
+    <p className="text-white break-words">
+      Bei uns findest du hochwertige Designermöbel nach Maß. Das 
+      heißt du kannst hier alles vom Maß, über die Materialien bis 
+      hin zu Füßen und Oberflächenbehandlung, frei konfigurieren.
+    </p>
+  </div>
+</footer>
+
     </div>
   );
 };
