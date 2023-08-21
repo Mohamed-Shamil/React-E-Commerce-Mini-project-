@@ -244,8 +244,6 @@ const BannerComponent = () => {
           <p className="text-gray-600">Laura</p>
           <p className="text-gray-600">01/20/2022</p>
           <div
-            data-aos="fade-up"
-            data-aos-duration="3000"
             className="flex flex-col items-center justify-center"
           >
             <img
